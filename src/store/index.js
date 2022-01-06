@@ -94,6 +94,18 @@ const app = {
       } catch (e) {
         throw new Error(e);
       }
+    },
+    async addNewFarm(context, payLoad) {
+      try {
+        const url = backendURL + "api/farm/addnew";
+        var {data} = await axios.post(url, payLoad);
+        console.log(data);
+        if (data) {
+          return data
+        }
+      } catch (e) {
+        throw new Error(e);
+      }
     }
   },
   getters: {
