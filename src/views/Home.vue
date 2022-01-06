@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <h1>Farms</h1>
+    <h1>Farms Data Table</h1>
     <div class="reading-filters">
       <h2>Filters</h2>
       <div class="filter-input-container">
-        <label>Select farm: </label> 
+        <label>Select Farm: </label> 
         <select v-model="selectedFarm" @change="filterReadings">
           <option :value="0" selected>All</option>
           <option v-for="(farm, index) in farms" :key="index" :value="farm.id">{{farm.farm_name}}</option>
@@ -100,3 +100,57 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+.table-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#readings-table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: auto;
+}
+
+#readings-table td, #readings-table th {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+#readings-table tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#readings-table th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}
+
+.reading-filters {
+  width: 95%;
+  margin: auto;
+  text-align: left;
+}
+
+.filter-input-container {
+  margin-bottom: 5px;
+}
+.filter-input-container label {
+  width: 200px;
+  display: inline-block;
+}
+
+.filter-input-container select {
+  width: 300px;
+}
+
+.filter-input-container input[type="date"] {
+  width: 292px;
+}
+
+</style>

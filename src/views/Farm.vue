@@ -68,7 +68,8 @@ export default {
 <style scoped>
 
 #map-container {
-  width: 100%;
+  width: 90%;
   height: 400px;
+  margin: auto;
 }
 </style>

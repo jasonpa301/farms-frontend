@@ -1,13 +1,17 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/farm">Farm Information</router-link>
+    <router-link to="/">Farms Data Table</router-link> <span>| </span>
+    <router-link to="/farm">Farm Information</router-link> <span>| </span>
+    <router-link to="/about">About</router-link>
   </div>
   <router-view/>
 </template>
 
 <style>
+body {
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,14 +22,22 @@
 
 #nav {
   padding: 30px;
+  background-color: black;
+  font-size: 18px;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: #cccccc;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#nav span {
+  color: #cccccc;
+  font-weight: bold;
 }
 </style>
