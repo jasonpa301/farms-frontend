@@ -106,6 +106,18 @@ const app = {
       } catch (e) {
         throw new Error(e);
       }
+    },
+    async addNewReading(context, payLoad) {
+      try {
+        const url = backendURL + "api/reading/addnew";
+        var {data} = await axios.post(url, payLoad);
+        console.log(data);
+        if (data) {
+          return data
+        }
+      } catch (e) {
+        throw new Error(e);
+      }
     }
   },
   getters: {

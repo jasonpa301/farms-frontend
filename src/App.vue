@@ -3,6 +3,7 @@
     <router-link to="/">Farms Data Table</router-link> <span>| </span>
     <router-link to="/farm">Farm Information</router-link> <span>| </span>
     <router-link to="/add-farm">Add New Farm</router-link> <span>| </span>
+    <router-link to="/add-reading">Add New Reading</router-link> <span>| </span>
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>

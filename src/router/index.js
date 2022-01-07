@@ -21,6 +21,12 @@ const routes = [
     path: '/add-farm',
     name: 'Add-farm',
     component: () => import('../views/Addfarm.vue')
+  },
+  ,
+  {
+    path: '/add-reading',
+    name: 'Add-reading',
+    component: () => import('../views/Addreading.vue')
   }
 ]
 
