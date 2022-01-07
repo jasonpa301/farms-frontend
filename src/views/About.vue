@@ -35,7 +35,6 @@ export default {
   methods: {
     createMap() {
       const self = this;
-
       var map = new Mapbox.Map({
         accessToken: self.accessToken,
         container: 'map-container',
@@ -43,14 +42,12 @@ export default {
         zoom: 5,
         center: [self.farms[0].longitude, self.farms[0].latitude]
       }); 
-      var marker;
-      var markerDiv;
+
       for (var i = 0; i < self.farms.length; i++) {
         var marker = new Mapbox.Marker()
         .setLngLat([self.farms[i].longitude, self.farms[i].latitude])
         .setPopup(new Mapbox.Popup().setHTML('<p style="font-weight: bold">'+self.farms[i].farm_name+'</p><p>'+self.farms[i].address+'</p>'))
         .addTo(map); 
-
       }
       
     }
