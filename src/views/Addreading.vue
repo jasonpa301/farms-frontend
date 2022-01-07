@@ -159,5 +159,35 @@ export default {
 </script>
 
 <style scoped>
+.form-container {
+  text-align: left;
+  width: 90%;
+  margin: auto;
+}
 
+.input-container {
+  margin-bottom: 5px;
+}
+
+.input-container label {
+  width: 200px;
+  display: inline-block;
+}
+
+.input-container select {
+  width: 300px;
+}
+
+.input-container input[type="number"], .input-container input[type="datetime-local"] {
+  width: 292px;
+}
+
+.submit-container {
+  width: 500px;
+  text-align: right;
+}
+
+.submit-container input {
+  cursor: pointer;
+}
 </style>
