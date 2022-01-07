@@ -22,7 +22,7 @@
 import axios from 'axios';
 
 export default {
-  name: 'About',
+  name: 'Add-farm',
   computed: {
     
   },
