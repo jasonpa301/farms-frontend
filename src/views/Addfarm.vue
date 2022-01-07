@@ -2,17 +2,18 @@
   <div class="add-farm">
     <h1>Add New Farm</h1>
     <div class="form-container">
-        <div class="input-container">
-            <label>Farm name:</label>
-            <input type="text" placeholder="farm name" @input="farmName = $event.target.value" v-model="farmName"/>
-        </div>
-        <div class="input-container">
-            <label>Address:</label>
-            <input type="text" placeholder="Askonkatu 9, 15100 Lahti" @input="farmAddress = $event.target.value" v-model="farmAddress"/>
-        </div>
-        <div>
-            <input ref="newFarmSubmit" type="button" value="Submit" @click="submitFarm">
-        </div>
+      <p>Add a new farm to the app. Please add a valid address, as the location will be pinpointed on the map.</p>
+      <div class="input-container">
+          <label>Farm name:</label>
+          <input type="text" placeholder="farm name" @input="farmName = $event.target.value" v-model="farmName"/>
+      </div>
+      <div class="input-container">
+          <label>Address:</label>
+          <input type="text" placeholder="Askonkatu 9, 15100 Lahti" @input="farmAddress = $event.target.value" v-model="farmAddress"/>
+      </div>
+      <div class="submit-container">
+          <input ref="newFarmSubmit" type="button" value="Submit" @click="submitFarm">
+      </div>
     </div>
   </div>
 </template>
@@ -48,13 +49,11 @@ export default {
       var encodedUrl = encodeURI(url);
       try {
         var {data} = await axios.get(encodedUrl);
-        console.log(data);
       } catch (e) {
         throw new Error(e);
       }
 
       if (data && data.features && data.features.length > 0) {
-        console.log(data.features[0].center);
         var longitude = data.features[0].center[0];
         var latitude = data.features[0].center[1];
 
@@ -64,9 +63,7 @@ export default {
           lat: latitude,
           long: longitude
         }
-        console.log(payLoad);
         var returnData = await self.$store.dispatch("app/addNewFarm", payLoad);
-        console.log(returnData);
         if (returnData) {
           if (returnData.success) {
             alert("Farm: "+self.farmName+", successfuly added to database")
@@ -107,5 +104,33 @@ export default {
 </script>
 
 <style scoped>
+
+.form-container {
+  text-align: left;
+  width: 90%;
+  margin: auto;
+}
+
+.input-container {
+  margin-bottom: 5px;
+}
+.input-container label {
+  width: 150px;
+  display: inline-block;
+}
+
+.input-container input[type="text"] {
+  width: 200px;
+  display: inline-block;
+}
+
+.submit-container {
+  width: 358px;
+  text-align: right;
+}
+
+.submit-container input {
+  cursor: pointer;
+}
 
 </style>
