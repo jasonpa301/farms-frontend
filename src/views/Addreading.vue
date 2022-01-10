@@ -32,7 +32,7 @@
           <input type="datetime-local" v-model="readingTime" @change="changeReadingTime" :max="todaysDate">
       </div>
       <div class="submit-container">
-          <input ref="newReadingSubmit" type="button" value="Submit" @click="submitReading">
+          <input ref="newReadingSubmit" type="button" value="Submit" @click="submitReading" :disabled="(!selectedFarm || !selectedReadingType || !readingValue || !readingTime)">
       </div>
     </div>
   </div>

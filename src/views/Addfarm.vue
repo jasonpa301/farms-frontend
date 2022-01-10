@@ -12,7 +12,7 @@
           <input type="text" placeholder="Askonkatu 9, 15100 Lahti" @input="farmAddress = $event.target.value" v-model="farmAddress"/>
       </div>
       <div class="submit-container">
-          <input ref="newFarmSubmit" type="button" value="Submit" @click="submitFarm">
+          <input ref="newFarmSubmit" type="button" value="Submit" @click="submitFarm" :disabled="(!farmName || !farmAddress)">
       </div>
     </div>
   </div>
