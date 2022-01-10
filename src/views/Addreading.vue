@@ -25,7 +25,7 @@
       </div>
       <div class="input-container">
           <label>Value:</label>
-          <input type="number" placeholder="12.65" @input="ReadingValue = $event.target.value" v-model="readingValue"/>
+          <input type="number" placeholder="12.65" @input="readingValue = $event.target.value" v-model="readingValue"/>
       </div>
       <div class="input-container">
           <label>Time:</label>
