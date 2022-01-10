@@ -54,7 +54,6 @@ export default {
 
     var datasets = [];
     var i = 0;
-    console.log("within comp", self.data)
     self.data.forEach((element) => { 
       if (i >= self.lineColours.length) {
         i = 0;
