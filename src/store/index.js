@@ -63,7 +63,6 @@ const app = {
       try {
         const url = backendURL + "api/readings/all";
         var {data} = await axios.get(url);
-        console.log(data);
         if (data) {
           context.commit("updateReadings", data);
         }
@@ -75,7 +74,6 @@ const app = {
       try {
         const url = backendURL + "api/farms/all";
         var {data} = await axios.get(url);
-        console.log(data);
         if (data) {
           context.commit("updateFarms", data);
         }
@@ -87,7 +85,6 @@ const app = {
       try {
         const url = backendURL + "api/readingtypes/all";
         var {data} = await axios.get(url);
-        console.log(data);
         if (data) {
           context.commit("updateReadingTypes", data);
         }
@@ -99,7 +96,6 @@ const app = {
       try {
         const url = backendURL + "api/farm/addnew";
         var {data} = await axios.post(url, payLoad);
-        console.log(data);
         if (data) {
           return data
         }
@@ -111,7 +107,6 @@ const app = {
       try {
         const url = backendURL + "api/reading/addnew";
         var {data} = await axios.post(url, payLoad);
-        console.log(data);
         if (data) {
           return data
         }
@@ -123,7 +118,6 @@ const app = {
       try {
         const url = backendURL + "api/readings/average/" + params.farmId + "/" + params.readingTypeId;
         var {data} = await axios.get(url);
-        console.log(data);
         if (data) {
           return data
         }

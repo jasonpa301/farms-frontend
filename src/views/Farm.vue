@@ -45,8 +45,6 @@ export default {
   methods: {
     selectFarm() {
       const self = this;
-      console.log(self.selectedFarmIndex);
-      console.log(self.farms[self.selectedFarmIndex])
       self.selectedFarm = self.farms[self.selectedFarmIndex];
 
       var map = new Mapbox.Map({
@@ -59,7 +57,6 @@ export default {
       const marker = new Mapbox.Marker()
       .setLngLat([self.selectedFarm.longitude, self.selectedFarm.latitude])
       .addTo(map);
-      console.log(map); 
     }
   }
 }
