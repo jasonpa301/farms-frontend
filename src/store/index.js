@@ -118,6 +118,18 @@ const app = {
       } catch (e) {
         throw new Error(e);
       }
+    },
+    async getAverageReadings(context, params) {
+      try {
+        const url = backendURL + "api/readings/average/" + params.farmId + "/" + params.readingTypeId;
+        var {data} = await axios.get(url);
+        console.log(data);
+        if (data) {
+          return data
+        }
+      } catch (e) {
+        throw new Error(e);
+      }
     }
   },
   getters: {
