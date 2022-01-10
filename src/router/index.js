@@ -22,11 +22,16 @@ const routes = [
     name: 'Add-farm',
     component: () => import('../views/Addfarm.vue')
   },
-  ,
   {
     path: '/add-reading',
     name: 'Add-reading',
     component: () => import('../views/Addreading.vue')
+  }
+  ,
+  {
+    path: '/data-charts',
+    name: 'Data-charts',
+    component: () => import('../views/Charts.vue')
   }
 ]
 
