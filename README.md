@@ -6,7 +6,8 @@ I chose to use vue as it is a language I am familiar with and it is convenient t
 [The backend of the project is located here](https://github.com/jasonpa301/farms-backend)
 
 #### Requirements
--node (created with node v16.13.1, npm v8.1.2)
+-node (created with node v16.13.1)
+-npm  (created with npm v8.1.2)
 
 #### Project setup
 
@@ -21,6 +22,11 @@ The following command will run the application locally at http://localhost:8080 
 ```
 npm run serve
 ```
+The application has been developed and tested on Windows 10, with Firefox and Chrome.
 
+#### Unit tests
 
-
+Tests can be run with the following command:
+```
+npm run test:unit
+```
