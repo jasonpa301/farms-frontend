@@ -190,4 +190,14 @@ export default {
 .submit-container input {
   cursor: pointer;
 }
+
+@media screen and (max-width: 560px) {
+  .submit-container, .input-container select, .input-container input[type="number"], .input-container input[type="datetime-local"] {
+    width: 100%;
+  }
+
+  .input-container label {
+    margin-bottom: 4px;
+  }
+}
 </style>

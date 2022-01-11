@@ -133,4 +133,14 @@ export default {
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .submit-container, .input-container, .input-container input[type="text"] {
+    width: 100%;
+  }
+
+  .input-container label {
+    margin-bottom: 4px;
+  }
+}
+
 </style>

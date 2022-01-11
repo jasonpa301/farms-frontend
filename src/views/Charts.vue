@@ -87,4 +87,19 @@ export default {
 .input-container select {
   width: 300px;
 }
+
+@media screen and (max-width: 500px) {
+  .chart-container, .input-container select {
+    width: 100%;
+  }
+
+  .filters-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .input-container label {
+    margin-bottom: 4px;
+  }
+}
 </style>

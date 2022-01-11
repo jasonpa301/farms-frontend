@@ -153,4 +153,13 @@ export default {
   width: 292px;
 }
 
+@media screen and (max-width: 550px) {
+  .filter-input-container, .filter-input-container select, .filter-input-container input[type="date"] {
+    width: 100%;
+  }
+
+  .filter-input-container label {
+    margin-bottom: 4px;
+  }
+}
 </style>
