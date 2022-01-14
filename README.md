@@ -5,6 +5,16 @@ I chose to use vue as it is a language I am familiar with and it is convenient t
 
 [The backend of the project is located here](https://github.com/jasonpa301/farms-backend)
 
+#### Features
+The application displays data from different farms. These features are included:
+-Display all readings in a table
+-Filter readings table (by Farm, Reading Type and date)
+-Display farm addresses and locations on interactive map
+-Add new farm form
+-Add new reading form
+-Charts that show monthly average readings
+
+
 #### Requirements
 -node (created with node v16.13.1)
 -npm  (created with npm v8.1.2)
