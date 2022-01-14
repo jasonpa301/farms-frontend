@@ -1,25 +1,25 @@
-### Solita farms frontend
+# Solita farms frontend
 This is a vue app created to be the frontend for the Solita Dev Academy pre-assignment. The project was created using Vue CLI and runs locally.
 
 I chose to use vue as it is a language I am familiar with and it is convenient to use with pre-existing components and libraries using NPM.
 
 [The backend of the project is located here](https://github.com/jasonpa301/farms-backend)
 
-#### Features
+## Features
 The application displays data from different farms. These features are included:
--Display all readings in a table
--Filter readings table (by Farm, Reading Type and date)
--Display farm addresses and locations on interactive map
--Add new farm form
--Add new reading form
--Charts that show monthly average readings
+- Display all readings in a table
+- Filter readings table (by Farm, Reading Type and date)
+- Display farm addresses and locations on interactive map
+- Add new farm form
+- Add new reading form
+- Charts that show monthly average readings
 
 
-#### Requirements
--node (created with node v16.13.1)
--npm  (created with npm v8.1.2)
+## Requirements
+- node (created with node v16.13.1)
+- npm  (created with npm v8.1.2)
 
-#### Project setup
+## Project setup
 
 Clone the repo, then install dependencies:
 ```
@@ -27,14 +27,14 @@ npm install
 ```
 A .env file must be added with variables as shown in the .env.example file. The backend will run at http://localhost:80/ by default, if for some reason you are using a different backend URL, it should be changed here. My mapbox API key will be provided or you can use your own if you choose to.
 
-#### Running the application
+## Running the application
 The following command will run the application locally at http://localhost:8080 by default.
 ```
 npm run serve
 ```
 The application has been developed and tested on Windows 10, with Firefox and Chrome.
 
-#### Unit tests
+## Unit tests
 
 Tests can be run with the following command:
 ```
